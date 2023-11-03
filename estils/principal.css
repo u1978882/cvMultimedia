@@ -9,28 +9,41 @@
     --blue: #0084a5;
     --purple: #a82dd1;
     --yellow: #fff565;
+    --green1: #073B3A;
+    --green2: #0b6e4f;
+    --green3: #08A045;
+    --green4: #6BBF59;
+    --green5: #21D375;
 }
 
 .light {
     --bg: var(--gray0);
-    --bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
-    --bg-dropdown: var(--gray0);
-    --text: var(--gray6);
-    --border-color: var(--blue);
-    --bg-solar: var(--yellow);
+    --bg-primary: var(--blue);
 }
 
 
 .dark {
     --bg: var(--gray5);
-    --bg-nav: linear-gradient(to right, var(--gray5), var(--gray6));
-    --bg-dropdown: var(--gray6);
-    --text: var(--gray0);
-    --border-color: var(--purple);
-    --bg-solar: var(--blue);
+    --bg-primary: red;
 }
 
-.primary {
+* {
     transition: 1s;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.bg {
     background-color: var(--bg);
+}
+
+.bg-primary {
+    background-color: var(--bg-primary);
+}
+
+.bg-secondary {
+    background-color: var(--bg-secondary);
 }
