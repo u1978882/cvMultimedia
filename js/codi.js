@@ -1,13 +1,12 @@
 QuerrySelector.ready(function() {
     
-
+    // Dark and light mode change
     const theme = localStorage.getItem("theme");
     if (theme == "light") {
         qs("body").replaceClass("dark", "light");
         qs("#themeToggle").attr("checked", true);
     }
 
-    // Dark and light mode change
     qs("#themeToggle").onChange((e) => {
         qs(":root").firstElement().style.setProperty("--transition-time", "0.2s");
         if(qs("#themeToggle").attr("checked") == false){
@@ -19,6 +18,7 @@ QuerrySelector.ready(function() {
             localStorage.setItem("theme", "light");
         }
     })
+
 
 
     // Sharp and rounded mode change
@@ -41,6 +41,30 @@ QuerrySelector.ready(function() {
     })
     
 
+    qs("#button-colorpicker").onClick((e) => {
+        qs("#backdrop-colorpicker").addClass("show");
+    })
+
+    qs("#backdrop-colorpicker").onClick((e, selector) => {
+        selector.removeClass("show")
+    })
+
+
+    // Color pikcer
+
+    let colorPrimary = getComputedStyle(qs(":root").firstElement()).getPropertyValue('--main');
+    let colorSecondary = getComputedStyle(qs(":root").firstElement()).getPropertyValue("--secondary");
+    const primaryColorCookie = localStorage.getItem("primaryColor");
+    if (primaryColorCookie) colorPrimary = primaryColorCookie
+    const secondaryColorCookie = localStorage.getItem("secondaryColor");
+    if (secondaryColorCookie) colorSecondary = primaryColorCookie
+
+    qs("#color-picker-primary").value(colorPrimary)
+
+    qs("#color-picker-primary").onChange((e, selector) => {
+        qs(":root").firstElement().style.setProperty('--main', selector.value());
+        //qs("#color-picker-primary").value(colorPrimary)
+    })
     
 
 })
