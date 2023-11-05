@@ -125,17 +125,17 @@ var QuerrySelector = /** @class */ (function () {
         this.fe("mouseOver");
     };
     QuerrySelector.prototype.onChangeVisibility = function (callback) {
-        if (this.list[0]) {
-            var selector_1 = this;
+        this.list.forEach(function (element) {
+            var selector = new QuerrySelector(QuerrySelector.toNodeList(element));
             new IntersectionObserver(function (entries, observer) {
                 entries.forEach(function (entry) {
                     if (entry.intersectionRatio > 0) {
-                        callback(selector_1);
+                        callback(selector);
                         observer.disconnect();
                     }
                 });
-            }).observe(this.list[0]);
-        }
+            }).observe(element);
+        });
     };
     // Static function that gets a function as parameter and will be called when the DOM is loaded
     QuerrySelector.ready = function (functionReady) {

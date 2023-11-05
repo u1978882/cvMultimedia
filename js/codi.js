@@ -136,12 +136,30 @@ QuerrySelector.ready(function() {
         css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid var(--bg-primary)}";
         document.body.appendChild(css);
     };
-    
+
+
+    // Open the skill modal
+    qs(".sidebar-item").onClick((e, selector) => {
+        selector.addClass("show");
+        qs("#sidebarBackdrop").addClass("show");
+    })
+
+    qs("#sidebarBackdrop").onClick((e, selector) => {
+        selector.removeClass("show")
+        qs(".sidebar-item").removeClass("show")
+    })
+
     
     // Remove one time animations.
     setTimeout(() => {
         qs(".progress-animation").removeClass("progress-animation")
     }, 1000)
+
+
+    qs(".main-image-footer").onChangeVisibility((selector) => {
+        console.log(selector.data("image"))
+        qs(selector.data("image")).addClass("show");
+    })
 
 })
 
