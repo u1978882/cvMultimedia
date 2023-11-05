@@ -29,7 +29,7 @@ Then i have a accent color, by default its light-purple, because i only have one
 The distribuition its a sidebar to show my photo, my contacts and my skills. And the main content have an alternating pattern of parragraph on the left and photo on the right, and the next have the parragraph on the right and the photo on the left.
 Then there is the top-left button, acts like a navigation bar but it does not take that much space.
 
-###Theme change
+### Theme change
 
 When oppening the navigation bar if you select the first option you will be able to shange the theme and the accent color. The theme changer is a toggle button and the accent color changer is a color picker. Both of these values will be saved using cookies.
 
