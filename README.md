@@ -15,3 +15,12 @@ In my web cv the main part that regards information architecture is the top butt
 
 The visual desing of my cv is quite minimalist, emulating some of the discord app looks and feels. 
 It has several animations, like: 
+- When page opens the percentage barrs fill up.
+- When a skill is clicked an animation reveals some information about it.
+- The name has an animation that emulates typing on a terminal and changing the name to other phrases.
+- The top right button animates on hover and on click.
+- The theme change have an animation.
+- The photos apear with an animation when they are on viewport.
+- The theme selector apears from the right.
+
+  
