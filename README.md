@@ -40,7 +40,7 @@ https://github.com/u1978882/QuerrySelector
 The sintax is similar to jquery and you will se that when it comes to js all the app have ben using it.
 Example to animate the images:
 
-```
+```js
     qs(".observed-image").onChangeVisibility((selector) => {
         qs(selector.data("image")).addClass("show");
     })
@@ -48,7 +48,7 @@ Example to animate the images:
 
 Or open modals:
 
-```
+```js
     qs(".sidebar-item").onClick((e, selector) => {
         selector.addClass("show");
         qs("#sidebarBackdrop").addClass("show");
@@ -56,7 +56,7 @@ Or open modals:
 ```
 
 Or change the css variable of the accent color.
-```
+```javascript
     qs("#color-picker-primary").onChange((e, selector) => {
         qs(":root").firstElement().style.setProperty('--main', selector.value());
         localStorage.setItem("primaryColor", selector.value());
