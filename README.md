@@ -35,8 +35,7 @@ When oppening the navigation bar if you select the first option you will be able
 
 ## Framework
 
-I used a framework to code the entire web, but i made that framework from scratsh. I always have seen JQuerry as a simple thing and i thought to myselve that will be easy to build it, so i took this oportunity to do that. The code of the framework is on this other repository:
-https://github.com/u1978882/QuerrySelector
+I used a framework to code the entire web, but i made that framework from scratsh. I always have seen JQuerry as a simple thing and i thought to myselve that will be easy to build it, so i took this oportunity to do that. The code of the framework is on this other repository [QuerrySelector](https://github.com/u1978882/QuerrySelector).
 The sintax is similar to jquery and you will se that when it comes to js all the app have ben using it.
 Example to animate the images:
 
