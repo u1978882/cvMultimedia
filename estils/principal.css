@@ -355,7 +355,7 @@ button {
 }
 
 .top-button:hover {
-    top: -220px;
+    top: -235px;
     transition: top 0.2s;
 }
 
@@ -469,7 +469,7 @@ h3 {
     margin-left: auto; 
     margin-right: auto;
     animation: open-sidebar-item 1s;
-    height: 240px;
+    height: 285px;
     overflow: hidden;
 }
 
@@ -482,6 +482,7 @@ h3 {
 }
 
 .sidebar-item .progress-bar-content{
+    padding: 15px;
     display: none;
 }
 
@@ -511,7 +512,7 @@ h3 {
         height: 60px;
     }
     100% {
-        height: 240px;
+        height: 285px;
     }
 }
 
